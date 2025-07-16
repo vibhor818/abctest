@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: vibhorabctest 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: vibhorabctest
+  template:
+    metadata:
+      labels:
+        app: vibhorabctest 
+    spec:
+      containers:
+        - name: vibhorabctest 
+          image: rajconacrforaks.azurecr.io/vibhorabctest
+          ports:
+          - containerPort: 80
